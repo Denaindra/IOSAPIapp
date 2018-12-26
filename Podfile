@@ -6,5 +6,6 @@ target 'SampleIOSApp' do
   use_frameworks!
 
   # Pods for SampleIOSApp
-
+    pod 'FacebookCore'
+    pod 'FacebookLogin'
 end
