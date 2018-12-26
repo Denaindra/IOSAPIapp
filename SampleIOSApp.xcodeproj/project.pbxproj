@@ -78,14 +78,54 @@
 		AC366E7A21D3B742002B1C8B /* SampleIOSApp */ = {
 			isa = PBXGroup;
 			children = (
+				AC366E9121D3BB89002B1C8B /* Utility */,
+				AC366E9021D3BB81002B1C8B /* ViewModel */,
+				AC366E8F21D3BB7B002B1C8B /* Model */,
+				AC366E8E21D3BB75002B1C8B /* View */,
 				AC366E7B21D3B742002B1C8B /* AppDelegate.swift */,
-				AC366E7D21D3B742002B1C8B /* ViewController.swift */,
-				AC366E7F21D3B742002B1C8B /* Main.storyboard */,
 				AC366E8221D3B744002B1C8B /* Assets.xcassets */,
 				AC366E8421D3B744002B1C8B /* LaunchScreen.storyboard */,
 				AC366E8721D3B744002B1C8B /* Info.plist */,
 			);
 			path = SampleIOSApp;
+			sourceTree = "<group>";
+		};
+		AC366E8E21D3BB75002B1C8B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AC366E9221D3DC54002B1C8B /* SubViews */,
+				AC366E7F21D3B742002B1C8B /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AC366E8F21D3BB7B002B1C8B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AC366E9021D3BB81002B1C8B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				AC366E7D21D3B742002B1C8B /* ViewController.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		AC366E9121D3BB89002B1C8B /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		AC366E9221D3DC54002B1C8B /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SubViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -371,6 +411,19 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"Bolts\"",
+					"-framework",
+					"\"FBSDKCoreKit\"",
+					"-framework",
+					"\"FBSDKLoginKit\"",
+					"-framework",
+					"\"FacebookCore\"",
+					"-framework",
+					"\"FacebookLogin\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mgdperera.SampleIOSApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -389,6 +442,19 @@
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"Bolts\"",
+					"-framework",
+					"\"FBSDKCoreKit\"",
+					"-framework",
+					"\"FBSDKLoginKit\"",
+					"-framework",
+					"\"FacebookCore\"",
+					"-framework",
+					"\"FacebookLogin\"",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mgdperera.SampleIOSApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";

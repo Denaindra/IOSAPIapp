@@ -79,7 +79,9 @@
                     </view>
                     <navigationItem key="navigationItem" title="List View" id="KSN-K6-CeM"/>
                     <connections>
+                        <outlet property="Email" destination="6pd-nk-Rck" id="wxM-mT-OUo"/>
                         <outlet property="loginButton" destination="rwH-qx-3NC" id="fgn-uM-hAH"/>
+                        <outlet property="userName" destination="nyP-Iw-k6b" id="Uae-bW-Kkl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
