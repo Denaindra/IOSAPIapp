@@ -31,7 +31,8 @@ class ViewController: UIViewController{
     }
     
     func InitialSteupForUItableView(){
-
+        listView.rowHeight = UITableView.automaticDimension
+        listView.estimatedRowHeight = 10
     }
     
     func IntialSeteupFBLoginButton() {
@@ -67,9 +68,9 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource{
         return cell
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
-    }
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        return 100
+//    }
     
 }
 

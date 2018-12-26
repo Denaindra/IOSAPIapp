@@ -33,8 +33,8 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="83482 Windler Corner Suite 475\nLake Ozellaside, LA 57272-8368" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FfS-0g-WBv">
-                        <rect key="frame" x="120" y="68" width="379" height="36"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="83482 Windler Corner Suite 475\nLake Ozellaside, LA 57272-8368 83482 Windler Corner Suite 475\nLake Ozellaside, LA 57272-8368" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FfS-0g-WBv">
+                        <rect key="frame" x="120" y="50" width="379" height="54"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <color key="textColor" red="0.72941176470000002" green="0.73333333329999995" blue="0.69411764710000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
@@ -47,6 +47,7 @@
                     <constraint firstItem="DZu-Qq-MaQ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="KjQ-MV-7Hm"/>
                     <constraint firstAttribute="trailing" secondItem="DZu-Qq-MaQ" secondAttribute="trailing" constant="10" id="Pbl-gR-6a8"/>
                     <constraint firstItem="FfS-0g-WBv" firstAttribute="leading" secondItem="Q3t-dl-gUT" secondAttribute="trailing" constant="10" id="V8B-6g-o9G"/>
+                    <constraint firstItem="FfS-0g-WBv" firstAttribute="top" secondItem="DZu-Qq-MaQ" secondAttribute="bottom" constant="21" id="Y2K-f3-AmX"/>
                     <constraint firstItem="DZu-Qq-MaQ" firstAttribute="leading" secondItem="Q3t-dl-gUT" secondAttribute="trailing" constant="10" id="duO-sk-d0p"/>
                     <constraint firstAttribute="trailing" secondItem="FfS-0g-WBv" secondAttribute="trailing" constant="10" id="iYd-o6-96D"/>
                 </constraints>
