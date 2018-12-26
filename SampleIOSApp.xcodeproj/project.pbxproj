@@ -14,6 +14,8 @@
 		AC366E8321D3B744002B1C8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC366E8221D3B744002B1C8B /* Assets.xcassets */; };
 		AC366E8621D3B744002B1C8B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC366E8421D3B744002B1C8B /* LaunchScreen.storyboard */; };
 		AC366E9421D3E6FE002B1C8B /* FBResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC366E9321D3E6FE002B1C8B /* FBResponse.swift */; };
+		AC366E9721D3ED28002B1C8B /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC366E9521D3ED28002B1C8B /* TableViewCell.swift */; };
+		AC366E9821D3ED28002B1C8B /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC366E9621D3ED28002B1C8B /* TableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		AC366E8521D3B744002B1C8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AC366E8721D3B744002B1C8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC366E9321D3E6FE002B1C8B /* FBResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBResponse.swift; sourceTree = "<group>"; };
+		AC366E9521D3ED28002B1C8B /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		AC366E9621D3ED28002B1C8B /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +131,8 @@
 		AC366E9221D3DC54002B1C8B /* SubViews */ = {
 			isa = PBXGroup;
 			children = (
+				AC366E9521D3ED28002B1C8B /* TableViewCell.swift */,
+				AC366E9621D3ED28002B1C8B /* TableViewCell.xib */,
 			);
 			path = SubViews;
 			sourceTree = "<group>";
@@ -192,6 +198,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC366E8621D3B744002B1C8B /* LaunchScreen.storyboard in Resources */,
+				AC366E9821D3ED28002B1C8B /* TableViewCell.xib in Resources */,
 				AC366E8321D3B744002B1C8B /* Assets.xcassets in Resources */,
 				AC366E8121D3B742002B1C8B /* Main.storyboard in Resources */,
 			);
@@ -262,6 +269,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC366E7E21D3B742002B1C8B /* ViewController.swift in Sources */,
+				AC366E9721D3ED28002B1C8B /* TableViewCell.swift in Sources */,
 				AC366E7C21D3B742002B1C8B /* AppDelegate.swift in Sources */,
 				AC366E9421D3E6FE002B1C8B /* FBResponse.swift in Sources */,
 			);
