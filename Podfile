@@ -8,4 +8,5 @@ target 'SampleIOSApp' do
   # Pods for SampleIOSApp
     pod 'FacebookCore'
     pod 'FacebookLogin'
+    pod 'SwiftyJSON', '~> 4.0'
 end

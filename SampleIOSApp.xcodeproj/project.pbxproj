@@ -13,6 +13,7 @@
 		AC366E8121D3B742002B1C8B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC366E7F21D3B742002B1C8B /* Main.storyboard */; };
 		AC366E8321D3B744002B1C8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC366E8221D3B744002B1C8B /* Assets.xcassets */; };
 		AC366E8621D3B744002B1C8B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC366E8421D3B744002B1C8B /* LaunchScreen.storyboard */; };
+		AC366E9421D3E6FE002B1C8B /* FBResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC366E9321D3E6FE002B1C8B /* FBResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		AC366E8221D3B744002B1C8B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC366E8521D3B744002B1C8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AC366E8721D3B744002B1C8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC366E9321D3E6FE002B1C8B /* FBResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 		AC366E8F21D3BB7B002B1C8B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				AC366E9321D3E6FE002B1C8B /* FBResponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -233,6 +236,7 @@
 				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
 				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -243,6 +247,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -258,6 +263,7 @@
 			files = (
 				AC366E7E21D3B742002B1C8B /* ViewController.swift in Sources */,
 				AC366E7C21D3B742002B1C8B /* AppDelegate.swift in Sources */,
+				AC366E9421D3E6FE002B1C8B /* FBResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -2,6 +2,7 @@
 import UIKit
 import FacebookLogin
 import FBSDKLoginKit
+import SwiftyJSON
 
 class ViewController: UIViewController{
     
@@ -42,12 +43,13 @@ class ViewController: UIViewController{
     }
 }
 
+
 extension ViewController : FBSDKLoginButtonDelegate {
     
     func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
         
         if error != nil {
-            print ("Here there is erro \(error)")
+            print ("Here there is erro \(error!)")
         }
         else if result.isCancelled{
             print ("user can cle login ")
@@ -55,9 +57,12 @@ extension ViewController : FBSDKLoginButtonDelegate {
         else {
             FBSDKGraphRequest(graphPath:"me", parameters: ["fields":"email,name"]).start(completionHandler: { (connection, result, error) in
                 if error == nil {
-                    print("User Info : \(result)")
-                } else {
-                    print("Error Getting Info \(error)");
+                    let value : JSON = JSON(result!)
+                    self.UpdateuserDetails(value: value)
+                    self.ChnageButtonText(btntitle:"Logout")
+                }
+                else {
+                    print("Error Getting Info \(error!)");
                 }
             })
         }
@@ -66,5 +71,8 @@ extension ViewController : FBSDKLoginButtonDelegate {
     func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
        ChnageButtonText(btntitle:"Logging")
     }
-    
+    func UpdateuserDetails(value:JSON){
+        self.userName.text = value["name"].string
+        self.Email.text = value["email"].string
+    }
 }
