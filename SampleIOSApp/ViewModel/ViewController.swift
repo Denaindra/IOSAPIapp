@@ -12,13 +12,10 @@ class ViewController: UIViewController{
     @IBOutlet weak var Email: UILabel!
     @IBOutlet weak var listView: UITableView!
     
-    
     //properties
     private let FBButton = FBSDKLoginButton()
     private let animals: [String] = ["Horse", "Cow", "Camel", "Sheep", "Goat"]
 
-    
-    
     @IBAction func LoginButtonClick(_ sender: UIButton) {
         FBButton.sendActions(for: .touchUpInside)
     }
@@ -40,18 +37,22 @@ class ViewController: UIViewController{
         FBButton.delegate = self
         if FBSDKAccessToken.current() != nil {
             ChnageButtonText(btntitle:"Logout")
-            listView.isHidden = false;
+            self.ListviewVisibility(hidden: false)
         }
             
         else {
             ChnageButtonText(btntitle:"Logging")
-            listView.isHidden = true;
+            self.ListviewVisibility(hidden: true)
         }
     }
     
     func ChnageButtonText(btntitle:String) {
         loginButton.setTitle(btntitle, for: .normal)
         
+    }
+    
+    func ListviewVisibility(hidden:Bool) {
+        listView.isHidden = hidden
     }
 }
 
@@ -67,10 +68,6 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource{
         cell.title.text = self.animals[indexPath.row]
         return cell
     }
-    
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        return 100
-//    }
     
 }
 
@@ -89,7 +86,7 @@ extension ViewController : FBSDKLoginButtonDelegate {
                     let value : JSON = JSON(result!)
                     self.UpdateuserDetails(value: value)
                     self.ChnageButtonText(btntitle:"Logout")
-                    self.listView.isHidden = false;
+                    self.ListviewVisibility(hidden: false)
                 }
                 else {
                     print("Error Getting Info \(error!)");
@@ -100,7 +97,7 @@ extension ViewController : FBSDKLoginButtonDelegate {
     
     func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
         ChnageButtonText(btntitle:"Logging")
-        listView.isHidden = true;
+        self.ListviewVisibility(hidden: true)
     }
     
     func UpdateuserDetails(value:JSON){
