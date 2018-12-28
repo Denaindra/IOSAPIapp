@@ -4,6 +4,7 @@ import FacebookLogin
 import FBSDKLoginKit
 import SwiftyJSON
 
+
 class ViewController: UIViewController{
     
     //UI outlets
@@ -15,7 +16,9 @@ class ViewController: UIViewController{
     //properties
     private let FBButton = FBSDKLoginButton()
     private let animals: [String] = ["Horse", "Cow", "Camel", "Sheep", "Goat"]
-
+    private let clientUtitlity = ClientUtility()
+    private var dataResponse:[FBResponse] = []
+    
     @IBAction func LoginButtonClick(_ sender: UIButton) {
         FBButton.sendActions(for: .touchUpInside)
     }
@@ -38,6 +41,7 @@ class ViewController: UIViewController{
         if FBSDKAccessToken.current() != nil {
             ChnageButtonText(btntitle:"Logout")
             self.ListviewVisibility(hidden: false)
+            LoadData()
         }
             
         else {
@@ -45,10 +49,23 @@ class ViewController: UIViewController{
             self.ListviewVisibility(hidden: true)
         }
     }
+    func LoadData() {
+        clientUtitlity.RetriveDetailList(completion: {
+            let result = self.clientUtitlity.GetResultDetails()["data"]
+           
+            for item in result.arrayValue {
+                let fbresponse = FBResponse()
+                fbresponse.title = item["title"].stringValue
+                fbresponse.description = item["description"].stringValue
+                fbresponse.address = item["address"].stringValue
+                self.dataResponse.append(fbresponse)
+            }
+            self.listView.reloadData()
+        })
+    }
     
     func ChnageButtonText(btntitle:String) {
         loginButton.setTitle(btntitle, for: .normal)
-        
     }
     
     func ListviewVisibility(hidden:Bool) {
@@ -60,12 +77,12 @@ class ViewController: UIViewController{
 extension ViewController : UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-       return animals.count
+        return dataResponse.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = listView.dequeueReusableCell(withIdentifier: "TableViewCell") as! TableViewCell
-        cell.title.text = self.animals[indexPath.row]
+        cell.title.text = self.dataResponse[indexPath.row].title
         return cell
     }
     
@@ -73,7 +90,8 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource{
 
 extension ViewController : FBSDKLoginButtonDelegate {
     
-    func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
+    func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result:
+        FBSDKLoginManagerLoginResult!, error: Error!) {
         if error != nil {
             print ("Here there is erro \(error!)")
         }

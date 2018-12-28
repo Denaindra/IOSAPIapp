@@ -16,6 +16,9 @@
 		AC366E9421D3E6FE002B1C8B /* FBResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC366E9321D3E6FE002B1C8B /* FBResponse.swift */; };
 		AC366E9721D3ED28002B1C8B /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC366E9521D3ED28002B1C8B /* TableViewCell.swift */; };
 		AC366E9821D3ED28002B1C8B /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC366E9621D3ED28002B1C8B /* TableViewCell.xib */; };
+		AC556C3C21D5C62100CA47F3 /* ClientUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC556C3B21D5C62100CA47F3 /* ClientUtility.swift */; };
+		AC556C3E21D5D37100CA47F3 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC556C3D21D5D37100CA47F3 /* Image.swift */; };
+		AC556C4021D5E22000CA47F3 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC556C3F21D5E22000CA47F3 /* Data.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,9 @@
 		AC366E9321D3E6FE002B1C8B /* FBResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBResponse.swift; sourceTree = "<group>"; };
 		AC366E9521D3ED28002B1C8B /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		AC366E9621D3ED28002B1C8B /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
+		AC556C3B21D5C62100CA47F3 /* ClientUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientUtility.swift; sourceTree = "<group>"; };
+		AC556C3D21D5D37100CA47F3 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		AC556C3F21D5E22000CA47F3 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +115,8 @@
 			isa = PBXGroup;
 			children = (
 				AC366E9321D3E6FE002B1C8B /* FBResponse.swift */,
+				AC556C3D21D5D37100CA47F3 /* Image.swift */,
+				AC556C3F21D5E22000CA47F3 /* Data.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -124,6 +132,7 @@
 		AC366E9121D3BB89002B1C8B /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				AC556C3B21D5C62100CA47F3 /* ClientUtility.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -238,6 +247,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-SampleIOSApp/Pods-SampleIOSApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
@@ -249,6 +259,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
@@ -268,9 +279,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC556C4021D5E22000CA47F3 /* Data.swift in Sources */,
 				AC366E7E21D3B742002B1C8B /* ViewController.swift in Sources */,
+				AC556C3E21D5D37100CA47F3 /* Image.swift in Sources */,
 				AC366E9721D3ED28002B1C8B /* TableViewCell.swift in Sources */,
 				AC366E7C21D3B742002B1C8B /* AppDelegate.swift in Sources */,
+				AC556C3C21D5C62100CA47F3 /* ClientUtility.swift in Sources */,
 				AC366E9421D3E6FE002B1C8B /* FBResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

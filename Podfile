@@ -9,4 +9,5 @@ target 'SampleIOSApp' do
     pod 'FacebookCore'
     pod 'FacebookLogin'
     pod 'SwiftyJSON', '~> 4.0'
+    pod 'Alamofire', '~> 4.7.3'
 end
