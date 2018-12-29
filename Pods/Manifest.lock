@@ -18,12 +18,16 @@ PODS:
     - Bolts (~> 1.9)
   - FBSDKLoginKit (4.38.1):
     - FBSDKCoreKit
+  - SDWebImage (4.4.2):
+    - SDWebImage/Core (= 4.4.2)
+  - SDWebImage/Core (4.4.2)
   - SwiftyJSON (4.2.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.7.3)
   - FacebookCore
   - FacebookLogin
+  - SDWebImage (~> 4.0)
   - SwiftyJSON (~> 4.0)
 
 SPEC REPOS:
@@ -34,6 +38,7 @@ SPEC REPOS:
     - FacebookLogin
     - FBSDKCoreKit
     - FBSDKLoginKit
+    - SDWebImage
     - SwiftyJSON
 
 SPEC CHECKSUMS:
@@ -43,8 +48,9 @@ SPEC CHECKSUMS:
   FacebookLogin: ebcf34714a1cb9f0759d9f071cfb01ed500996cf
   FBSDKCoreKit: 8d47857400e2f5bdea697a80daff882e91c84ef6
   FBSDKLoginKit: 4621c690d9dd8628031a4791497062183ea34b0d
+  SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
   SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
 
-PODFILE CHECKSUM: 2f9d2b935e8dfc77177ddda05f57ee0d3082567a
+PODFILE CHECKSUM: 1fcd9db3ad4280d3ce78b8454a55dbe0f8d8cc1a
 
 COCOAPODS: 1.5.3

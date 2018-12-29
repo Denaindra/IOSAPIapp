@@ -18,7 +18,7 @@
 		AC366E9821D3ED28002B1C8B /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC366E9621D3ED28002B1C8B /* TableViewCell.xib */; };
 		AC556C3C21D5C62100CA47F3 /* ClientUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC556C3B21D5C62100CA47F3 /* ClientUtility.swift */; };
 		AC556C3E21D5D37100CA47F3 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC556C3D21D5D37100CA47F3 /* Image.swift */; };
-		AC556C4021D5E22000CA47F3 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC556C3F21D5E22000CA47F3 /* Data.swift */; };
+		AC556C4021D5E22000CA47F3 /* ServiceData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC556C3F21D5E22000CA47F3 /* ServiceData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,7 +37,7 @@
 		AC366E9621D3ED28002B1C8B /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		AC556C3B21D5C62100CA47F3 /* ClientUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientUtility.swift; sourceTree = "<group>"; };
 		AC556C3D21D5D37100CA47F3 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
-		AC556C3F21D5E22000CA47F3 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		AC556C3F21D5E22000CA47F3 /* ServiceData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,7 +116,7 @@
 			children = (
 				AC366E9321D3E6FE002B1C8B /* FBResponse.swift */,
 				AC556C3D21D5D37100CA47F3 /* Image.swift */,
-				AC556C3F21D5E22000CA47F3 /* Data.swift */,
+				AC556C3F21D5E22000CA47F3 /* ServiceData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -253,6 +253,7 @@
 				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
 				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -265,6 +266,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -279,7 +281,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC556C4021D5E22000CA47F3 /* Data.swift in Sources */,
+				AC556C4021D5E22000CA47F3 /* ServiceData.swift in Sources */,
 				AC366E7E21D3B742002B1C8B /* ViewController.swift in Sources */,
 				AC556C3E21D5D37100CA47F3 /* Image.swift in Sources */,
 				AC366E9721D3ED28002B1C8B /* TableViewCell.swift in Sources */,

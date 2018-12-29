@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Data{
+class ServiceData{
     var id: Int?
     var title, description, address, postcode: String?
     var phoneNumber, latitude, longitude: String?

@@ -27,7 +27,7 @@
                             <constraint firstAttribute="width" constant="90" id="tM1-QE-V2f"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DZu-Qq-MaQ">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DZu-Qq-MaQ">
                         <rect key="frame" x="120" y="10" width="379" height="19"/>
                         <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="17"/>
                         <nil key="textColor"/>

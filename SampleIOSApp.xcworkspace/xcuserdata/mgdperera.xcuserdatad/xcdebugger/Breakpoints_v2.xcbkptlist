@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SampleIOSApp/View/SubViews/TableViewCell.swift"
-            timestampString = "567541997.451301"
+            timestampString = "567759099.745685"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "25"
@@ -26,45 +26,29 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SampleIOSApp/ViewModel/ViewController.swift"
-            timestampString = "567700175.30532"
+            timestampString = "567761055.974329"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "93"
-            endingLineNumber = "93"
-            landmarkName = "tableView(_:cellForRowAt:)"
+            startingLineNumber = "118"
+            endingLineNumber = "118"
+            landmarkName = "Load(url:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SampleIOSApp/ViewModel/ViewController.swift"
-            timestampString = "567700175.305869"
+            timestampString = "567761055.974938"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "87"
-            endingLineNumber = "87"
-            landmarkName = "tableView(_:numberOfRowsInSection:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SampleIOSApp/ViewModel/ViewController.swift"
-            timestampString = "567700175.306641"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "70"
-            endingLineNumber = "70"
-            landmarkName = "LoadData()"
-            landmarkType = "7">
+            startingLineNumber = "71"
+            endingLineNumber = "71"
+            landmarkName = "ViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

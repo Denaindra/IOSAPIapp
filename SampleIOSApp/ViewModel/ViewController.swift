@@ -3,6 +3,7 @@ import UIKit
 import FacebookLogin
 import FBSDKLoginKit
 import SwiftyJSON
+import SDWebImage
 
 
 class ViewController: UIViewController{
@@ -15,7 +16,7 @@ class ViewController: UIViewController{
     
     //properties
     private let FBButton = FBSDKLoginButton()
-    private let animals: [String] = ["Horse", "Cow", "Camel", "Sheep", "Goat"]
+
     private let clientUtitlity = ClientUtility()
     private var dataResponse:[FBResponse] = []
     
@@ -83,11 +84,34 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = listView.dequeueReusableCell(withIdentifier: "TableViewCell") as! TableViewCell
         cell.title.text = self.dataResponse[indexPath.row].title
+        cell.address.text = self.dataResponse[indexPath.row].address
+        
+        let imageUrlString = "http://lorempixel.com/200/200/cats/1/"
+        cell.uiImageView.sd_setImage(with: URL(string:imageUrlString))
+        
         return cell
     }
     
 }
 
+extension UIImageView {
+    
+    func Load(url: URL) {
+        DispatchQueue.global().async { [weak self] in
+            if let data = try? Data(contentsOf: url) {
+                if let image = UIImage(data: data) {
+                    DispatchQueue.main.async {
+                        self?.image = image
+                    }
+                }
+            }
+        }
+    }
+    
+
+}
+
+    
 extension ViewController : FBSDKLoginButtonDelegate {
     
     func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result:
