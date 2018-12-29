@@ -59,6 +59,7 @@ class ViewController: UIViewController{
                 fbresponse.title = item["title"].stringValue
                 fbresponse.description = item["description"].stringValue
                 fbresponse.address = item["address"].stringValue
+                fbresponse.image?.small = item["image"]["small"].stringValue
                 self.dataResponse.append(fbresponse)
             }
             self.listView.reloadData()
@@ -95,7 +96,6 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource{
 }
 
 extension UIImageView {
-    
     func Load(url: URL) {
         DispatchQueue.global().async { [weak self] in
             if let data = try? Data(contentsOf: url) {
