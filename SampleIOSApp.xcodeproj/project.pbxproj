@@ -19,6 +19,7 @@
 		AC556C3C21D5C62100CA47F3 /* ClientUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC556C3B21D5C62100CA47F3 /* ClientUtility.swift */; };
 		AC556C3E21D5D37100CA47F3 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC556C3D21D5D37100CA47F3 /* Image.swift */; };
 		AC556C4021D5E22000CA47F3 /* ServiceData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC556C3F21D5E22000CA47F3 /* ServiceData.swift */; };
+		AC65215E21DA71C1001B5509 /* UserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC65215D21DA71C1001B5509 /* UserDefault.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		AC556C3B21D5C62100CA47F3 /* ClientUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientUtility.swift; sourceTree = "<group>"; };
 		AC556C3D21D5D37100CA47F3 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		AC556C3F21D5E22000CA47F3 /* ServiceData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceData.swift; sourceTree = "<group>"; };
+		AC65215D21DA71C1001B5509 /* UserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefault.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				AC556C3B21D5C62100CA47F3 /* ClientUtility.swift */,
+				AC65215D21DA71C1001B5509 /* UserDefault.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -281,6 +284,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC65215E21DA71C1001B5509 /* UserDefault.swift in Sources */,
 				AC556C4021D5E22000CA47F3 /* ServiceData.swift in Sources */,
 				AC366E7E21D3B742002B1C8B /* ViewController.swift in Sources */,
 				AC556C3E21D5D37100CA47F3 /* Image.swift in Sources */,
