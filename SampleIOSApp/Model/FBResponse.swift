@@ -13,7 +13,7 @@ class FBResponse {
     var id: Int?
     var title, description, address, postcode: String?
     var phoneNumber, latitude, longitude: String?
-    var image: Image?
+    var image = Image()
 }
 
 

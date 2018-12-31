@@ -18,6 +18,7 @@ class ViewController: UIViewController{
     private let FBButton = FBSDKLoginButton()
 
     private let clientUtitlity = ClientUtility()
+    private let userDefault = UserDefault()
     private var dataResponse:[FBResponse] = []
     
     @IBAction func LoginButtonClick(_ sender: UIButton) {
@@ -59,7 +60,7 @@ class ViewController: UIViewController{
                 fbresponse.title = item["title"].stringValue
                 fbresponse.description = item["description"].stringValue
                 fbresponse.address = item["address"].stringValue
-                fbresponse.image?.small = item["image"]["small"].stringValue
+                fbresponse.image.small = item["image"]["small"].stringValue
                 self.dataResponse.append(fbresponse)
             }
             self.listView.reloadData()
@@ -86,10 +87,7 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource{
         let cell = listView.dequeueReusableCell(withIdentifier: "TableViewCell") as! TableViewCell
         cell.title.text = self.dataResponse[indexPath.row].title
         cell.address.text = self.dataResponse[indexPath.row].address
-        
-        let imageUrlString = "http://lorempixel.com/200/200/cats/1/"
-        cell.uiImageView.sd_setImage(with: URL(string:imageUrlString))
-        
+        cell.uiImageView.sd_setImage(with: URL(string:self.dataResponse[indexPath.row].image.small!))        
         return cell
     }
     
