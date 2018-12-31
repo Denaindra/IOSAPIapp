@@ -10,8 +10,8 @@ class ViewController: UIViewController{
     
     //UI outlets
     @IBOutlet weak var loginButton: UIButton!
-    @IBOutlet weak var userName: UILabel!
-    @IBOutlet weak var Email: UILabel!
+    @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var email: UILabel!
     @IBOutlet weak var listView: UITableView!
     
     //properties
@@ -65,6 +65,8 @@ class ViewController: UIViewController{
             }
             self.listView.reloadData()
         })
+        self.name.text = userDefault.GetUserDafultValue(key: "name")
+        self.email.text = userDefault.GetUserDafultValue(key: "email")
     }
     
     func ChnageButtonText(btntitle:String) {
@@ -92,7 +94,7 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource{
     }
     
 }
-    
+
 extension ViewController : FBSDKLoginButtonDelegate {
     
     func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result:
@@ -110,6 +112,7 @@ extension ViewController : FBSDKLoginButtonDelegate {
                     self.UpdateuserDetails(value: value)
                     self.ChnageButtonText(btntitle:"Logout")
                     self.ListviewVisibility(hidden: false)
+                    self.LoadData()
                 }
                 else {
                     print("Error Getting Info \(error!)");
@@ -121,10 +124,18 @@ extension ViewController : FBSDKLoginButtonDelegate {
     func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
         ChnageButtonText(btntitle:"Logging")
         self.ListviewVisibility(hidden: true)
+        self.name.text = ""
+        self.email.text = ""
+        userDefault.RemoveUserDefault(key: "name")
+        userDefault.RemoveUserDefault(key: "email")
+
     }
     
-    func UpdateuserDetails(value:JSON){
-        self.userName.text = value["name"].string
-        self.Email.text = value["email"].string
+    func UpdateuserDetails(value:JSON) {
+        self.name.text = value["name"].string
+        self.email.text = value["email"].string
+        userDefault.SetUserDafaultparameter(value: value["name"].string!, key: "name")
+        userDefault.SetUserDafaultparameter(value: value["email"].string!, key: "email")
+
     }
 }
