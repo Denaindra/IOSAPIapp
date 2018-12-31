@@ -87,28 +87,11 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource{
         let cell = listView.dequeueReusableCell(withIdentifier: "TableViewCell") as! TableViewCell
         cell.title.text = self.dataResponse[indexPath.row].title
         cell.address.text = self.dataResponse[indexPath.row].address
-        cell.uiImageView.sd_setImage(with: URL(string:self.dataResponse[indexPath.row].image.small!))        
+        cell.uiImageView.sd_setImage(with: URL(string:self.dataResponse[indexPath.row].image.small!))
         return cell
     }
     
 }
-
-extension UIImageView {
-    func Load(url: URL) {
-        DispatchQueue.global().async { [weak self] in
-            if let data = try? Data(contentsOf: url) {
-                if let image = UIImage(data: data) {
-                    DispatchQueue.main.async {
-                        self?.image = image
-                    }
-                }
-            }
-        }
-    }
-    
-
-}
-
     
 extension ViewController : FBSDKLoginButtonDelegate {
     
