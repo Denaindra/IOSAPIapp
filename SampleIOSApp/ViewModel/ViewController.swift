@@ -93,6 +93,11 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource{
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        performSegue(withIdentifier: "detailSegu", sender: nil)
+    }
+    
 }
 
 extension ViewController : FBSDKLoginButtonDelegate {
