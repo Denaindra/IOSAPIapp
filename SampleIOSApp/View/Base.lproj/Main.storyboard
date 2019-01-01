@@ -110,8 +110,39 @@
                     <view key="view" contentMode="scaleToFill" id="Kkl-uM-dD9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iIF-OB-jr4">
+                                <rect key="frame" x="95" y="64" width="185" height="169"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="185" id="Obr-Ih-ITr"/>
+                                    <constraint firstAttribute="height" constant="169" id="UtW-eQ-aCn"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="When click on List View cell should open details view " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="POY-7H-yRJ">
+                                <rect key="frame" x="5" y="247" width="365" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gaJ-Y4-1si">
+                                <rect key="frame" x="5" y="318" width="365" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="POY-7H-yRJ" firstAttribute="leading" secondItem="FEQ-Al-ypO" secondAttribute="leading" constant="5" id="0Hk-Jp-X1J"/>
+                            <constraint firstItem="gaJ-Y4-1si" firstAttribute="top" secondItem="POY-7H-yRJ" secondAttribute="bottom" constant="30" id="FK1-yc-Zsk"/>
+                            <constraint firstItem="iIF-OB-jr4" firstAttribute="centerX" secondItem="Kkl-uM-dD9" secondAttribute="centerX" id="P74-Yb-uVl"/>
+                            <constraint firstItem="POY-7H-yRJ" firstAttribute="top" secondItem="iIF-OB-jr4" secondAttribute="bottom" constant="14" id="bey-Qb-E4b"/>
+                            <constraint firstItem="gaJ-Y4-1si" firstAttribute="leading" secondItem="FEQ-Al-ypO" secondAttribute="leading" constant="5" id="dwk-qH-yQJ"/>
+                            <constraint firstItem="iIF-OB-jr4" firstAttribute="top" secondItem="FEQ-Al-ypO" secondAttribute="top" id="ito-vC-djO"/>
+                            <constraint firstItem="FEQ-Al-ypO" firstAttribute="trailing" secondItem="gaJ-Y4-1si" secondAttribute="trailing" constant="5" id="rnB-fi-OS6"/>
+                            <constraint firstItem="FEQ-Al-ypO" firstAttribute="trailing" secondItem="POY-7H-yRJ" secondAttribute="trailing" constant="5" id="vhp-1F-qdN"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="FEQ-Al-ypO"/>
                     </view>
                     <navigationItem key="navigationItem" title="Detail" id="la9-3y-iED">
@@ -120,7 +151,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WPX-i0-d8t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1956" y="123"/>
+            <point key="canvasLocation" x="1956" y="122.78860569715144"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="7sy-uR-AlI">
