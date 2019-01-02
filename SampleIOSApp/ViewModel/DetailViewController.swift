@@ -9,16 +9,26 @@
 import UIKit
 
 class DetailViewController: UIViewController {
-
+    
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var imageTitle: UILabel!
+    @IBOutlet weak var imageDescription: UILabel!
+    
+    var dataResponse = FBResponse()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.backBarButtonItem?.title = ""
+        SetDataFromSegu()
+    }
+    
+    func SetDataFromSegu() {
+        imageTitle.text = dataResponse.title
+        imageDescription.text = dataResponse.description
+        imageView.sd_setImage(with: URL(string:dataResponse.image.small!))
+    }
+    override func viewDidAppear(_ animated: Bool) {
         
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-
-    }
-  
-
+    
 }

@@ -16,7 +16,7 @@ class ViewController: UIViewController{
     
     //properties
     private let FBButton = FBSDKLoginButton()
-
+    private var selectedData = FBResponse()
     private let clientUtitlity = ClientUtility()
     private let userDefault = UserDefault()
     private var dataResponse:[FBResponse] = []
@@ -76,6 +76,14 @@ class ViewController: UIViewController{
     func ListviewVisibility(hidden:Bool) {
         listView.isHidden = hidden
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "detailSegu" {
+            if let destinationVC = segue.destination as? DetailViewController {
+                 destinationVC.dataResponse = self.selectedData
+            }
+        }
+    }
 }
 
 
@@ -94,7 +102,7 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        self.selectedData = dataResponse[indexPath.row]
         performSegue(withIdentifier: "detailSegu", sender: nil)
     }
     

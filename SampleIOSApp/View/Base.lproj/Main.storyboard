@@ -106,7 +106,7 @@
         <!--Detail-->
         <scene sceneID="kMv-gv-ICM">
             <objects>
-                <viewController id="R2V-2c-8w2" customClass="DetailViewController" customModule="SampleIOSApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailViewController" id="R2V-2c-8w2" customClass="DetailViewController" customModule="SampleIOSApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Kkl-uM-dD9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -148,6 +148,11 @@
                     <navigationItem key="navigationItem" title="Detail" id="la9-3y-iED">
                         <barButtonItem key="backBarButtonItem" title=" " id="eAc-Yz-9vV"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="imageDescription" destination="gaJ-Y4-1si" id="xvX-kX-iWK"/>
+                        <outlet property="imageTitle" destination="POY-7H-yRJ" id="TeI-SJ-bbh"/>
+                        <outlet property="imageView" destination="iIF-OB-jr4" id="yks-Lc-YBl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WPX-i0-d8t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
