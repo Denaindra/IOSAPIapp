@@ -20,6 +20,8 @@ class ViewController: UIViewController{
     private let clientUtitlity = ClientUtility()
     private let userDefault = UserDefault()
     private var dataResponse:[FBResponse] = []
+    private let imageSync = ImageSync()
+    
     
     @IBAction func LoginButtonClick(_ sender: UIButton) {
         FBButton.sendActions(for: .touchUpInside)
@@ -98,6 +100,7 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource{
         cell.title.text = self.dataResponse[indexPath.row].title
         cell.address.text = self.dataResponse[indexPath.row].address
         cell.uiImageView.sd_setImage(with: URL(string:self.dataResponse[indexPath.row].image.small!))
+        imageSync.GetImageFromUrl(imageUrl:dataResponse[indexPath.row].image.small!, image:  cell.uiImageView)
         return cell
     }
     
