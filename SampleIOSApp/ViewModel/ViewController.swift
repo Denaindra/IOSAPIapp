@@ -63,6 +63,7 @@ class ViewController: UIViewController{
                 fbresponse.description = item["description"].stringValue
                 fbresponse.address = item["address"].stringValue
                 fbresponse.image.small = item["image"]["small"].stringValue
+                fbresponse.image.large = item["image"]["large"].stringValue
                 self.dataResponse.append(fbresponse)
             }
             self.listView.reloadData()
