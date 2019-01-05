@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class DetailViewController: UIViewController {
     
@@ -24,7 +25,11 @@ class DetailViewController: UIViewController {
     func SetDataFromSegu() {
         imageTitle.text = dataResponse.title
         imageDescription.text = dataResponse.description
-        imageView.sd_setImage(with: URL(string:dataResponse.image.large!))
+        //imageView.sd_setImage(with: URL(string:dataResponse.image.small!))
+        imageView.sd_setImage(with: URL(string: dataResponse.image.large!)) { (image, error, cache, url) in
+            // Your code inside completion block
+        }
+      
     }
     override func viewDidAppear(_ animated: Bool) {
         

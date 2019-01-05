@@ -3,7 +3,6 @@ import UIKit
 import FacebookLogin
 import FBSDKLoginKit
 import SwiftyJSON
-import SDWebImage
 
 
 class ViewController: UIViewController{
