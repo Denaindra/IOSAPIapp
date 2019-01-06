@@ -5,7 +5,7 @@ import FBSDKLoginKit
 import SwiftyJSON
 
 
-class ViewController: UIViewController{
+class ListViewController: UIViewController{
     
     //UI outlets
     @IBOutlet weak var loginButton: UIButton!
@@ -61,6 +61,8 @@ class ViewController: UIViewController{
                 fbresponse.title = item["title"].stringValue
                 fbresponse.description = item["description"].stringValue
                 fbresponse.address = item["address"].stringValue
+                fbresponse.latitude = item["latitude"].stringValue
+                fbresponse.longitude = item["longitude"].stringValue
                 fbresponse.image.small = item["image"]["small"].stringValue
                 fbresponse.image.large = item["image"]["large"].stringValue
                 self.dataResponse.append(fbresponse)
@@ -89,7 +91,7 @@ class ViewController: UIViewController{
 }
 
 
-extension ViewController : UITableViewDelegate, UITableViewDataSource{
+extension ListViewController : UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dataResponse.count
@@ -111,7 +113,7 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource{
     
 }
 
-extension ViewController : FBSDKLoginButtonDelegate {
+extension ListViewController : FBSDKLoginButtonDelegate {
     
     func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result:
         FBSDKLoginManagerLoginResult!, error: Error!) {

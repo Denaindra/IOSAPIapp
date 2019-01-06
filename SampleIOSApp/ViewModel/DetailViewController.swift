@@ -24,12 +24,21 @@ class DetailViewController: UIViewController {
     func SetDataFromSegu() {
         imageTitle.text = dataResponse.title
         imageDescription.text = dataResponse.description
-        //imageView.sd_setImage(with: URL(string:dataResponse.image.small!))
         imageView.sd_setImage(with: URL(string: dataResponse.image.large!)) { (image, error, cache, url) in
             // Your code inside completion block
         }
-      
     }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        if segue.destination is LocationMapViewController
+        {
+            let destinationontroller = segue.destination as! LocationMapViewController
+            destinationontroller.dataResponse = self.dataResponse
+        }
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         
     }

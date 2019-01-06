@@ -10,13 +10,13 @@ import UIKit
 
 class LocationMapViewController: UIViewController {
 
-    private var dataResponse = FBResponse()
+    public var dataResponse = FBResponse()
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        print("\(dataResponse.address) \(dataResponse.latitude) \(dataResponse.longitude)")
     }
     
     /*
