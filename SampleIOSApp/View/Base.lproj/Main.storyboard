@@ -147,6 +147,11 @@
                     </view>
                     <navigationItem key="navigationItem" title="Detail" id="la9-3y-iED">
                         <barButtonItem key="backBarButtonItem" title=" " id="eAc-Yz-9vV"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="map" landscapeImage="map" largeContentSizeImage="map" id="75T-KM-Wh2">
+                            <connections>
+                                <segue destination="uCf-sw-XeJ" kind="show" id="3Pz-ll-jpp"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="imageDescription" destination="gaJ-Y4-1si" id="xvX-kX-iWK"/>
@@ -157,6 +162,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WPX-i0-d8t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1956" y="122.78860569715144"/>
+        </scene>
+        <!--Map-->
+        <scene sceneID="2jJ-e4-2yV">
+            <objects>
+                <viewController id="uCf-sw-XeJ" customClass="LocationMapViewController" customModule="SampleIOSApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Erv-S5-mAm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="D8o-Xe-mVF"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Map" id="XOS-s9-WtY"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X3R-ap-k7D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2906" y="123"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="7sy-uR-AlI">
@@ -179,4 +200,7 @@
             <point key="canvasLocation" x="278" y="123"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="map" width="12" height="12"/>
+    </resources>
 </document>

@@ -22,6 +22,7 @@
 		AC556C4021D5E22000CA47F3 /* ServiceData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC556C3F21D5E22000CA47F3 /* ServiceData.swift */; };
 		AC65215E21DA71C1001B5509 /* UserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC65215D21DA71C1001B5509 /* UserDefault.swift */; };
 		ACD2D72421DC3BB0008B9B98 /* ImageSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD2D72321DC3BB0008B9B98 /* ImageSync.swift */; };
+		ACD4F05B21E1C41A005428B1 /* LocationMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD4F05A21E1C41A005428B1 /* LocationMapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		AC556C3F21D5E22000CA47F3 /* ServiceData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceData.swift; sourceTree = "<group>"; };
 		AC65215D21DA71C1001B5509 /* UserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefault.swift; sourceTree = "<group>"; };
 		ACD2D72321DC3BB0008B9B98 /* ImageSync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSync.swift; sourceTree = "<group>"; };
+		ACD4F05A21E1C41A005428B1 /* LocationMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationMapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +134,7 @@
 			children = (
 				AC366E7D21D3B742002B1C8B /* ViewController.swift */,
 				AC1248B321DB203C002B72EA /* DetailViewController.swift */,
+				ACD4F05A21E1C41A005428B1 /* LocationMapViewController.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -294,6 +297,7 @@
 				AC65215E21DA71C1001B5509 /* UserDefault.swift in Sources */,
 				AC556C4021D5E22000CA47F3 /* ServiceData.swift in Sources */,
 				AC366E7E21D3B742002B1C8B /* ViewController.swift in Sources */,
+				ACD4F05B21E1C41A005428B1 /* LocationMapViewController.swift in Sources */,
 				AC556C3E21D5D37100CA47F3 /* Image.swift in Sources */,
 				AC366E9721D3ED28002B1C8B /* TableViewCell.swift in Sources */,
 				ACD2D72421DC3BB0008B9B98 /* ImageSync.swift in Sources */,

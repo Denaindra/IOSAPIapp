@@ -14,7 +14,6 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var imageTitle: UILabel!
     @IBOutlet weak var imageDescription: UILabel!
-    
     var dataResponse = FBResponse()
     
     override func viewDidLoad() {
