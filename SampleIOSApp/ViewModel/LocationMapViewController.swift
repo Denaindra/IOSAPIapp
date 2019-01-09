@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import GoogleMaps
 
 class LocationMapViewController: UIViewController {
 
@@ -16,9 +17,25 @@ class LocationMapViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        print("\(dataResponse.address) \(dataResponse.latitude) \(dataResponse.longitude)")
+        //print("\(dataResponse.address) \(dataResponse.latitude) \(dataResponse.longitude)")
     }
     
+    
+    override func loadView() {
+
+        let camera = GMSCameraPosition.camera(withLatitude: Double(dataResponse.latitude!) ?? 0, longitude: Double(dataResponse.longitude!) ?? 0, zoom: 6.0)
+        let mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
+        view = mapView
+        // Creates a marker in the center of the map.
+        let marker = GMSMarker()
+        marker.position = CLLocationCoordinate2D(latitude: Double(dataResponse.latitude!) ?? 0, longitude: Double(dataResponse.longitude!) ?? 0)
+        marker.title = dataResponse.address
+        marker.map = mapView
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+
+    }
     /*
     // MARK: - Navigation
 
